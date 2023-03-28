@@ -211,6 +211,10 @@ header > * {
   font-size: 8em;
 }
 
+.testimonials {
+  text-align: center;
+}
+
 .form-container {
   margin: 100px auto 0;
   width: 700px;
@@ -234,6 +238,7 @@ form {
   /* width: 300px; */
   background: var(--secondary-color);
   padding: 3em;
+  text-align: center;
 }
 
 form div {
@@ -254,25 +259,57 @@ form input {
   background: rgba(255, 255, 255, 0.4);
 }
 
-footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: var(--primary-color);
-}
-
 .agree input {
   width: auto;
 }
 
+footer {
+  padding: 2em;
+  background: var(--primary-color);
+  text-align: center;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-top > * {
+  flex: 1;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--gray-900);
+}
+
+footer a:hover {
+  color: var(--gray-100);
+}
+
+.social-media {
+  color: var(--gray-900);
+  font-size: 2em;
+  padding: 1em;
+}
+
+.social-media i {
+  /* display: inline-block; */
+  padding: 0.1em;
+}
+
 .main-carousel {
-  width: 80%;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 .carousel-cell {
   width: 30%;
-  height: 200px; /* height of carousel */
+  height: 300px; /* height of carousel */
   margin-right: 25px;
   background: var(--gray-700);
   border-radius: 15px;
