@@ -33,6 +33,14 @@ h6 {
   font-size: 2em;
 }
 
+h4 span {
+  font-style: italic;
+}
+
+h4 {
+  margin: 0;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -109,7 +117,7 @@ header > * {
 }
 
 .hero-photo {
-  background-image: url('https://assets.codepen.io/4042354/hero-image.jpg');
+  background-image: url('images/hero-image.jpg');
   background-size: cover;
 }
 
@@ -161,7 +169,7 @@ header > * {
 .dream {
   display: flex;
   align-items: center;
-  background-image: url('https://assets.codepen.io/4042354/apartment.jpg');
+  background-image: url('images/apartment.jpg');
 }
 
 .dream > * {
@@ -178,7 +186,7 @@ header > * {
 }
 
 .results {
-  background-image: url('https://assets.codepen.io/4042354/couple-and-child.jpg');
+  background-image: url('images/couple-and-child.jpg');
   background-size: cover;
 }
 
@@ -201,4 +209,73 @@ header > * {
 
 .results-icon i {
   font-size: 8em;
+}
+
+.form-container {
+  margin: 100px auto 0;
+  width: 700px;
+  display: flex;
+  /* filter: drop-shadow(5px 5px 0.5rem var(--gray-900)); */
+}
+
+.form-photo {
+  flex: 1;
+  background: #333;
+  background-image: url('images/house-with-keys.jpg');
+  background-size: cover;
+}
+
+.form-content {
+  flex: 1;
+  text-align: center;
+}
+
+form {
+  /* width: 300px; */
+  background: var(--secondary-color);
+  padding: 3em;
+}
+
+form div {
+  margin: 15px;
+}
+
+label {
+  line-height: 2.5;
+  font-size: 0.8em;
+}
+
+form input {
+  padding: 5px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #999;
+  border-left: 4px solid #000;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--primary-color);
+}
+
+.agree input {
+  width: auto;
+}
+
+.main-carousel {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel-cell {
+  width: 30%;
+  height: 200px; /* height of carousel */
+  margin-right: 25px;
+  background: var(--gray-700);
+  border-radius: 15px;
+  color: var(--gray-100);
+  padding: 2em;
 }

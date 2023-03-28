@@ -9,12 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
     <title>DreamVilla Homes </title>
 </head>
 
 <body>
     <div class="navigation">
-        <div class="logo">DreamVillas</div>
+        <div class="logo">
+            <h4>Dream<span>Villas</span></h4>
+        </div>
 
         <nav>
             <ul>
@@ -65,11 +69,11 @@
 
         <div class="spaces-photo">
             <div>
-                <img src="https://assets.codepen.io/4042354/couch-image.jpg" alt="" />
+                <img src="images/couch-image.jpg" alt="couch photo" />
             </div>
 
             <div>
-                <img src="https://assets.codepen.io/4042354/living-room.jpg" alt="" />
+                <img src="images/living-room.jpg" alt="living room photo" />
             </div>
 
         </div>
@@ -114,7 +118,7 @@
 
         <div class="spaces-photo">
             <div>
-                <img src="https://assets.codepen.io/4042354/couple.jpg" alt="" />
+                <img src="images/couple.jpg" alt="couple photo" />
             </div>
 
 
@@ -172,6 +176,128 @@
 
         </div>
     </section>
+
+    <section class="testimonials">
+        <h1>What Out Customers Say</h1>
+
+        <div class="testimonal-card">
+
+            <div class="main-carousel">
+                <div class="carousel-cell">
+                    <h2>Rick</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit repudiandae illo dicta
+                        consequuntur
+                        iusto, nesciunt culpa dolorem quam, earum ipsam aliquid laborum cumque vero ex exercitationem
+                        debitis?
+                        Molestias, consequatur quae.</p>
+                </div>
+
+                <div class="carousel-cell">
+                    <h2>Amanda</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit repudiandae illo dicta
+                        consequuntur
+                        iusto, nesciunt culpa dolorem quam, earum ipsam aliquid laborum cumque vero ex exercitationem
+                        debitis?
+                        Molestias, consequatur quae.</p>
+                </div>
+
+                <div class="carousel-cell">
+                    <h2>Steve</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit repudiandae illo dicta
+                        consequuntur
+                        iusto, nesciunt culpa dolorem quam, earum ipsam aliquid laborum cumque vero ex exercitationem
+                        debitis?
+                        Molestias, consequatur quae.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="form">
+
+        <form action="">
+            <h1>We're here when you are ready!</h1>
+            <div class="form-container">
+
+                <div class="form-photo">
+
+                </div>
+
+                <div class="form-content">
+                    <form>
+                        <h3>Create an Account</h3>
+
+                        <div>
+                            <label for="fname">First Name:</label>
+                            <input type="text" id="fname" placeholder="John">
+                        </div>
+
+                        <div>
+                            <label for="lname">Last Name:</label>
+                            <input type="text" id="lname" placeholder="Smith">
+                        </div>
+
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" placeholder="smith@email.com">
+                        </div>
+
+                        <div>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password">
+                        </div>
+
+                        <div class="agree">
+                            <input type="checkbox" id="agree">
+                            <label for="agree">I agree to the term and conditions</label>
+                        </div>
+
+                        <button type="submit">Submit</button>
+                        <button>Sign In</button>
+
+                    </form>
+                </div>
+
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <h4>Dream<span>Villas</span></h4>
+            <p>1000 Main Street <br>
+                Malvern, PA 19355 <br>
+                215.555.1212</p>
+        </div>
+
+        <div class="site-map">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">property</a></li>
+                <li><a href="#">listings</a></li>
+                <li><a href="#">service</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-buttons">
+            <div class="buttons">
+                <button>Sign Up</button>
+                <button>Register</button>
+            </div>
+        </div>
+
+        <div class="social-media">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="flickity-init.js"></script>
 
 </body>
 
