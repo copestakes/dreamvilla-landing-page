@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #b7c4cf;
+  --secondary-color: #eee3cb;
+  --accent-color: #d27125;
+  --gray-900: #0f1112;
+  --gray-700: #3b4346;
+  --gray-500: #7c8386;
+  --gray-300: #cad4d9;
+  --gray-100: #eef2f3;
+  --body-copy: 'Source Sans Pro', sans-serif;
+  --heading: 'Playfair Display', serif;
+}
+body {
+  background: var(--gray-100);
+  font-family: var(--body-copy);
+  color: var(--gray-900);
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 1.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading);
+  font-size: 2em;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* section {
+  margin: 1em 0;
+} */
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  list-style-type: none;
+}
+nav a {
+  text-decoration: none;
+  color: var(--gray-900);
+  padding: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+button {
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 25px;
+  background: var(--accent-color);
+  color: var(--gray-100);
+  margin: 0 0.5em;
+  font-weight: 700;
+}
+
+header button {
+  background: var(--gray-100);
+  color: var(--accent-color);
+}
+
+button:hover {
+  background: var(--primary-color);
+  color: var(--gray-100);
+}
+
+header {
+  height: 70vh;
+  display: flex;
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+header h1 {
+  font-size: 3.5em;
+  margin: 0;
+}
+
+header h2 {
+  color: var(--secondary-color);
+  margin-top: 0;
+}
+
+header > * {
+  flex: 1;
+}
+
+.hero-photo {
+  background-image: url('https://assets.codepen.io/4042354/hero-image.jpg');
+  background-size: cover;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.two-col {
+  display: flex;
+  align-items: center;
+}
+
+.two-col > * {
+  flex: 1;
+}
+
+.three-col {
+  display: flex;
+}
+
+.three-col-left {
+  flex: 2;
+}
+
+.three-col-right {
+  flex: 1;
+}
+
+.content {
+  padding: 2em 5em;
+}
+
+.content::before {
+  content: ' ';
+  display: block;
+  width: 111px;
+  height: 50px;
+  background: var(--accent-color);
+}
+
+.spaces-photo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.dream {
+  display: flex;
+  align-items: center;
+  background-image: url('https://assets.codepen.io/4042354/apartment.jpg');
+}
+
+.dream > * {
+  flex: 1;
+}
+
+.content-background {
+  background: rgba(210, 113, 37, 0.8);
+  color: var(--gray-100);
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.results {
+  background-image: url('https://assets.codepen.io/4042354/couple-and-child.jpg');
+  background-size: cover;
+}
+
+.results-content {
+  background: var(--primary-color);
+  padding: 1em;
+}
+
+.results-card {
+  background: var(--accent-color);
+  color: var(--gray-100);
+  padding: 2em;
+  margin: 2em;
+  text-align: center;
+}
+
+.results-card > * {
+  margin: 0;
+}
+
+.results-icon i {
+  font-size: 8em;
+}
