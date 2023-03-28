@@ -13,7 +13,6 @@
   --heading: 'Playfair Display', serif;
 }
 
-
 body {
   background: var(--gray-100);
   font-family: var(--body-copy);
@@ -59,10 +58,6 @@ h4 {
   padding: 1em;
 }
 
-nav ul {
-  display: flex;
-}
-
 nav li {
   list-style-type: none;
 }
@@ -101,9 +96,15 @@ button:hover {
 header {
   height: 70vh;
   display: flex;
+  flex-direction: column;
   background: var(--accent-color);
   color: var(--primary-color);
 }
+
+header > * {
+  flex: 1;
+}
+
 header h1 {
   font-size: 3.5em;
   margin: 0;
@@ -114,40 +115,17 @@ header h2 {
   margin-top: 0;
 }
 
-header > * {
-  flex: 1;
-}
-
 .hero-photo {
   background-image: url('images/hero-image.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 .hero-content {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.two-col {
-  display: flex;
-  align-items: center;
-}
-
-.two-col > * {
-  flex: 1;
-}
-
-.three-col {
-  display: flex;
-}
-
-.three-col-left {
-  flex: 2;
-}
-
-.three-col-right {
-  flex: 1;
+  text-align: center;
 }
 
 .content {
@@ -164,9 +142,8 @@ header > * {
 
 .spaces-photo img {
   width: 100%;
-  height: auto;
   object-fit: cover;
-  float: left;
+  display: block;
 }
 
 .dream {
@@ -276,20 +253,14 @@ footer {
   text-align: center;
 }
 
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-top > * {
-  flex: 1;
-}
-
 footer li {
   list-style-type: none;
 }
 
+footer ul {
+  margin: 0;
+  padding: 0;
+}
 footer a {
   text-decoration: none;
   color: var(--gray-900);
@@ -306,7 +277,6 @@ footer a:hover {
 }
 
 .social-media i {
-  /* display: inline-block; */
   padding: 0.1em;
 }
 
@@ -328,13 +298,43 @@ footer a:hover {
   display: none;
 }
 
-
-
-@media screen and (max-width: 960px){
-  
+@media screen and (min-width: 960px) {
   nav ul {
-    display: block;
-
+    display: flex;
   }
 
+  header {
+    flex-direction: row;
+  }
+
+  .two-col {
+    display: flex;
+    align-items: center;
+  }
+
+  .two-col > * {
+    flex: 1;
+  }
+
+  .three-col {
+    display: flex;
+  }
+
+  .three-col-left {
+    flex: 2;
+  }
+
+  .three-col-right {
+    flex: 1;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-top > * {
+    flex: 1;
+  }
 }
