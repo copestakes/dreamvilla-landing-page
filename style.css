@@ -12,6 +12,8 @@
   --body-copy: 'Source Sans Pro', sans-serif;
   --heading: 'Playfair Display', serif;
 }
+
+
 body {
   background: var(--gray-100);
   font-family: var(--body-copy);
@@ -335,5 +337,4 @@ footer a:hover {
 
   }
 
-  
 }
