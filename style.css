@@ -93,7 +93,28 @@ nav ul {
   left: 0;
   text-align: center;
   transition: all 0.5s;
-  opacity: 0.3;
+  opacity: 0;
+}
+
+/* THIS IS A TEST */
+.test {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  display: none;
+}
+
+/* #check {
+  display: none;
+}
+
+#check-label {
+  position: absolute;
+  right: 10px;
+} */
+
+#check:checked ~ .test {
+  display: block;
 }
 
 #check:checked ~ nav ul {
