@@ -36,6 +36,7 @@ h6 {
 
 h4 span {
   font-style: italic;
+  color: var(--accent-color);
 }
 
 h4 {
@@ -108,10 +109,10 @@ header > * {
 header h1 {
   font-size: 3.5em;
   margin: 0;
+  color: var(--secondary-color);
 }
 
 header h2 {
-  color: var(--secondary-color);
   margin-top: 0;
 }
 
@@ -201,20 +202,20 @@ header h2 {
 
 .form-container {
   margin: 100px auto 0;
-  width: 700px;
-  display: flex;
+  width: 80%;
   /* filter: drop-shadow(5px 5px 0.5rem var(--gray-900)); */
 }
 
 .form-photo {
-  flex: 1;
+  /* flex: 1; */
   background: #333;
   background-image: url('images/house-with-keys.jpg');
   background-size: cover;
+  height: 400px;
 }
 
 .form-content {
-  flex: 1;
+  /* flex: 1; */
   text-align: center;
 }
 
@@ -325,6 +326,14 @@ footer a:hover {
   }
 
   .three-col-right {
+    flex: 1;
+  }
+
+  .form-container {
+    display: flex;
+  }
+
+  .form-container > * {
     flex: 1;
   }
 
