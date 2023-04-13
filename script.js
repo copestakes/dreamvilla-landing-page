@@ -6,6 +6,11 @@ window.onload = function () {
   window.addEventListener('resize', checkAll, false);
 };
 
+window.addEventListener('click', function () {
+  var checkbox = document.querySelector('#check');
+  checkbox.checked = !checkbox.checked;
+});
+
 // const checkbox = document.querySelector('#check');
 // // add a click event listener to the window object
 // window.addEventListener('click', function (event) {
