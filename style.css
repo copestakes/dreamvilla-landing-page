@@ -13,7 +13,6 @@
   --heading: 'Playfair Display', serif;
 }
 
-
 body {
   background: var(--gray-100);
   font-family: var(--body-copy);
@@ -33,10 +32,24 @@ h5,
 h6 {
   font-family: var(--heading);
   font-size: 2em;
+  color: var(--gray-900);
 }
 
 h4 span {
   font-style: italic;
+  color: var(--accent-color);
+}
+
+.hero-content span {
+  font-style: italic;
+  color: var(--primary-color);
+}
+
+.hero h2 {
+  font-family: var(--body-copy);
+  font-size: 1.5em;
+  color: var(--gray-900);
+  font-weight: 400;
 }
 
 h4 {
@@ -52,6 +65,30 @@ h4 {
   margin: 1em 0;
 } */
 
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  position: relative;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span {
+  font-size: 2em;
+  cursor: pointer;
+  display: block;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -60,7 +97,36 @@ h4 {
 }
 
 nav ul {
-  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: -100%;
+  top: 58px;
+  padding-top: 2em;
+  background: var(--gray-300);
+  /* text-align: center; */
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+#check {
+  display: none;
+}
+
+#check-label {
+  font-size: 2em;
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+
+#check-label:hover {
+  color: var(--accent-color);
+}
+
+#check:checked ~ nav ul {
+  opacity: 1;
+  left: 0;
 }
 
 nav li {
@@ -70,12 +136,25 @@ nav a {
   text-decoration: none;
   color: var(--gray-900);
   padding: 1em;
+  font-size: 2em;
   text-transform: uppercase;
   font-weight: 700;
+  display: block;
+  position: relative;
 }
 
 nav a:hover {
   color: var(--accent-color);
+  transition: 0.3s;
+}
+
+nav a:hover::before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f152';
+  position: absolute;
+  line-height: 104px;
+  top: 0;
+  left: 0;
 }
 
 button {
@@ -94,60 +173,44 @@ header button {
 }
 
 button:hover {
-  background: var(--primary-color);
+  background: var(--gray-900);
   color: var(--gray-100);
+  transition: 0.3s;
 }
 
 header {
-  height: 70vh;
+  height: 90vh;
   display: flex;
+  flex-direction: column;
   background: var(--accent-color);
   color: var(--primary-color);
-}
-header h1 {
-  font-size: 3.5em;
-  margin: 0;
-}
-
-header h2 {
-  color: var(--secondary-color);
-  margin-top: 0;
 }
 
 header > * {
   flex: 1;
 }
 
+header h1 {
+  font-size: 3.5em;
+  margin: 0;
+  color: var(--secondary-color);
+}
+
+header h2 {
+  margin-top: 0;
+}
+
 .hero-photo {
   background-image: url('images/hero-image.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 .hero-content {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.two-col {
-  display: flex;
-  align-items: center;
-}
-
-.two-col > * {
-  flex: 1;
-}
-
-.three-col {
-  display: flex;
-}
-
-.three-col-left {
-  flex: 2;
-}
-
-.three-col-right {
-  flex: 1;
+  text-align: center;
 }
 
 .content {
@@ -164,33 +227,22 @@ header > * {
 
 .spaces-photo img {
   width: 100%;
-  height: auto;
   object-fit: cover;
-  float: left;
-}
-
-.dream {
-  display: flex;
-  align-items: center;
-  background-image: url('images/apartment.jpg');
-}
-
-.dream > * {
-  flex: 1;
+  display: block;
 }
 
 .content-background {
   background: rgba(210, 113, 37, 0.8);
   color: var(--gray-100);
+  height: 400px;
+}
+
+.content-background h1 {
+  color: var(--gray-100);
 }
 
 .reverse {
   flex-direction: row-reverse;
-}
-
-.results {
-  background-image: url('images/couple-and-child.jpg');
-  background-size: cover;
 }
 
 .results-content {
@@ -224,20 +276,20 @@ header > * {
 
 .form-container {
   margin: 100px auto 0;
-  width: 700px;
-  display: flex;
+  /* width: 80%; */
   /* filter: drop-shadow(5px 5px 0.5rem var(--gray-900)); */
 }
 
 .form-photo {
-  flex: 1;
+  /* flex: 1; */
   background: #333;
   background-image: url('images/house-with-keys.jpg');
   background-size: cover;
+  height: 400px;
 }
 
 .form-content {
-  flex: 1;
+  /* flex: 1; */
   text-align: center;
 }
 
@@ -276,27 +328,22 @@ footer {
   text-align: center;
 }
 
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-top > * {
-  flex: 1;
-}
-
 footer li {
   list-style-type: none;
 }
 
+footer ul {
+  margin: 0;
+  padding: 0;
+}
 footer a {
   text-decoration: none;
   color: var(--gray-900);
+  text-transform: uppercase;
 }
 
 footer a:hover {
-  color: var(--gray-100);
+  color: var(--accent-color);
 }
 
 .social-media {
@@ -306,7 +353,6 @@ footer a:hover {
 }
 
 .social-media i {
-  /* display: inline-block; */
   padding: 0.1em;
 }
 
@@ -315,26 +361,100 @@ footer a:hover {
 }
 
 .carousel-cell {
-  width: 30%;
-  height: 300px; /* height of carousel */
+  width: 100%;
+  height: 400px; /* height of carousel */
   margin-right: 25px;
   background: var(--gray-700);
   border-radius: 15px;
   color: var(--gray-100);
-  padding: 2em;
+  padding: 4em;
 }
 
-.toggle-label {
-  display: none;
+.carousel-cell h2 {
+  color: var(--gray-100);
 }
 
-
-
-@media screen and (max-width: 960px){
-  
+@media screen and (min-width: 960px) {
   nav ul {
-    display: block;
-
+    all: unset;
+    display: flex;
   }
 
+  nav a:hover::before {
+    content: '';
+  }
+
+  nav a {
+    font-size: 1em;
+  }
+
+  header {
+    flex-direction: row;
+  }
+
+  .dream {
+    display: flex;
+    align-items: center;
+    background-image: url('images/apartment.jpg');
+  }
+
+  .dream > * {
+    flex: 1;
+  }
+
+  .results {
+    background-image: url('images/couple-and-child.jpg');
+    background-size: cover;
+  }
+
+  .two-col {
+    display: flex;
+    align-items: center;
+  }
+
+  .two-col > * {
+    flex: 1;
+  }
+
+  .three-col {
+    display: flex;
+  }
+
+  .three-col-left {
+    flex: 2;
+  }
+
+  .three-col-right {
+    flex: 1;
+  }
+
+  .form-container {
+    display: flex;
+  }
+
+  .form-container > * {
+    flex: 1;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-top > * {
+    flex: 1;
+  }
+
+  #check-label {
+    display: none;
+  }
+
+  .carousel-cell {
+    width: 50%;
+  }
+
+  /* .toggle-label {
+    display: none;
+  } */
 }
